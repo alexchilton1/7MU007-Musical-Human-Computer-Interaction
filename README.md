@@ -20,5 +20,12 @@ The is synthesiser is capable of much more than it currently does within this pa
 ######Connecting the PS3 Controller
 
 Plug the controller into one of the USB (Universal Serial Bus) ports on the computer, then navigate to the controller section.
+
 INSERT PS3 SECTION PICTURE
+
+Inside the controller abstraction there is a message box called [print], click on this box and in the Pd window a list of connected devices will appear. In this case the one needed is the one relating to the device number of the PS3 controller.
+
+INSERT HID PRINTED DEVICES IN PD WINDOW WITH PS3 CIRCLED
+
+
 [hid] (Human Interface Device)
