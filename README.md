@@ -19,4 +19,6 @@ The is synthesiser is capable of much more than it currently does within this pa
 
 ######Connecting the PS3 Controller
 
-universal serial bus human interface device (USB HID)
+Plug the controller into one of the USB (Universal Serial Bus) ports on the computer, then navigate to the controller section.
+INSERT PS3 SECTION PICTURE
+[hid] (Human Interface Device)
