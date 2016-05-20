@@ -28,4 +28,4 @@ Inside the controller abstraction there is a message box called [print], click o
 INSERT HID PRINTED DEVICES IN PD WINDOW WITH PS3 CIRCLED
 
 
-[hid] (Human Interface Device)
+hid (Human Interface Device)
