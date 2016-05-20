@@ -28,4 +28,4 @@ Inside the controller abstraction there is a message box called [print], click o
 INSERT HID PRINTED DEVICES IN PD WINDOW WITH PS3 CIRCLED
 
 
-hid (Human Interface Device)
+hid (Human Interface Device) is an object for reading data from USB HID devices like keyboards, mice, joysticks, gamepads, keypads, and all sorts of other esoteric controllers like USB knobs, touchscreens, Apple IR Remotes, etc. It represents the data with a cross-platform message scheme which is then translated to the underlying native API for input devices.
