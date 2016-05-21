@@ -17,7 +17,7 @@ Open LorkSynthPS3.pd
 
 The is synthesiser is capable of much more than it currently does within this patch but some of its parameters have been limited for the sake of the group project, where multiple of these kind of real-time instruments link up and interact as a digital orchestra. If the parameters did not work within these constraints then it would be impossible, or at least extremely difficult, to have any control over this synthesiser in the group performance. The limitations set in place for this project allow full control over the instrument at any given point of the performance, so the player has the ability to react to any other changes made by the other instruments in the orchestra within the performance.
 
-#####Connecting the PS3 Controller
+######Connecting the PS3 Controller
 
 Plug the controller into one of the USB (Universal Serial Bus) ports on the computer, then navigate to the controller section.
 
@@ -60,4 +60,6 @@ The key selection section offset the chosen value by a number ranging from 0-11.
 
 INSERT KEY ABSTRACTION AND ADD NOTES TO NUMBER VALUES
 
+These two features are important and are used in conjunction with the note selection sliders. Before that stage though there are a few aspects to introduce. The first is the tempo control, it takes the millisecond value, divides it by 60000 (that equals 1 minute) and produces a final value. That value is how many beats per minute will occur using the current millisecond number. This flows into a metro (metronome) object, which triggers repeated steps that are divided to produce eight separate tiggers per sequence. This millsecond value is divided by eight and sent to a second metro object, it is divided like this to ensure it triggers at the start of every sequence. This metro triggers eight sets of random numbers between 0 and 22 which are passed to the faders below, their values are then passed to float objects where the numbers are stored until the corresponding step in the sequence is triggered.
 
+INSERT 8-STEP ABSTRACTION WITH SECTIONS LABELLED (BPM ETC)
