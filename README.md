@@ -38,8 +38,14 @@ The analogue sticks are only used as push buttons and not as moving potentiomete
 
 INSERT INSIDE PS3 ABSTRACTION WITH PD LEFT ABSTRACTION
 
-The final numbers are sent to various sections of the instrument which take the value and use it to trigger a bang either raising or lowering the value of its chosen parameter. 
+The final numbers are sent to various sections of the instrument which take the value and use it to trigger a bang either raising or lowering the value of its chosen parameter. This happens by using a fairly simple yet effective system.
+
+INSERT KEYPS3 ABSTRACTION (SPIGOT REVERSE SECTION)
+
+The down and up controls flow through a spigot and when allowed to pass through bang an integer either adding or subtracting from the final output value. This value is sent into the second inlet on the integer object being converted into an integer and stored for later use. The same value is being sent up to the float inlet of the two spigots. The left spigot specifies the lower number that can pass through while the right specifies the maximum. These both run through separate reverse boxes before being passed into their respective spigots, this is the clever and important part. When the lowest or highest value has been reached the corresponding spigot gets shut off, this is what provides the ability to cap each parameter between two specific values making it adaptable across any range of numbers. All of the buttons that use the modifier keys employ this scaling function.
 
 Here is the full list of parameters and their respective controls.
 
 INSERT BUTTON LAYOUT SHEET
+
+
