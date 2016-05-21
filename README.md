@@ -27,5 +27,19 @@ Inside the controller abstraction there is a message box called [print], click o
 
 INSERT HID PRINTED DEVICES IN PD WINDOW WITH PS3 CIRCLED
 
+Select the corresponding device number on the radio selection box and engage the toggle box attached to the hid object. Hid (Human Interface Device) is an object for reading data from USB HID devices like keyboards, mice, joysticks, gamepads, keypads, and all sorts of other esoteric controllers like USB knobs, touchscreens, Apple IR Remotes, etc. It represents the data with a cross-platform message scheme which is then translated to the underlying native API for input devices. The PS3 controller should now be connected to the pure data patch.
 
-hid (Human Interface Device) is an object for reading data from USB HID devices like keyboards, mice, joysticks, gamepads, keypads, and all sorts of other esoteric controllers like USB knobs, touchscreens, Apple IR Remotes, etc. It represents the data with a cross-platform message scheme which is then translated to the underlying native API for input devices.
+The controller makes use of modifier keys to extend the amount of controls available in the patch. A modifier key is a special key (or combination) that temporarily modifies the normal action of another key when pressed together. The L2 and R2 keys
+can be held down in conjuction with the four d-pad (directional pad) and four shape buttons.
+
+INSERT PS3 LAYOUT DIAGRAM
+
+The analogue sticks are only used as push buttons and not as moving potentiometers. When clicked the left lowers the wet amount and the right raises it. L1 and R1 toggle the random ratchet and selection on and off, select toggles the LFO on and off while start engages and disengages the polyphonic synth pad. As previously stated, the other buttons have three possible applications each. They all work in the same way, when the unmodified key is pressed the number 100 is triggered. When L2 is held during this it adds 10 to the overall number, the same is true when holding down R2 but instead it adds 20. These values run into a selection box choosing between 100, 110 and 120 and outputting numbers 1, 2 and 3 respectively.
+
+INSERT INSIDE PS3 ABSTRACTION WITH PD LEFT ABSTRACTION
+
+The final numbers are sent to various sections of the instrument which take the value and use it to trigger a bang either raising or lowering the value of its chosen parameter. 
+
+Here is the full list of parameters and their respective controls.
+
+INSERT BUTTON LAYOUT SHEET
