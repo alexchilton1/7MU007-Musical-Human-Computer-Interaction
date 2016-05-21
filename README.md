@@ -29,7 +29,7 @@ INSERT HID PRINTED DEVICES IN PD WINDOW WITH PS3 CIRCLED
 
 Select the corresponding device number on the radio selection box and engage the toggle box attached to the hid object. Hid (Human Interface Device) is an object for reading data from USB HID devices like keyboards, mice, joysticks, gamepads, keypads, and all sorts of other esoteric controllers like USB knobs, touchscreens, Apple IR Remotes, etc. It represents the data with a cross-platform message scheme which is then translated to the underlying native API for input devices. The PS3 controller should now be connected to the pure data patch.
 
-######How It Works
+######How The Controller Works
 
 The controller makes use of modifier keys to extend the amount of controls available in the patch. A modifier key is a special key (or combination) that temporarily modifies the normal action of another key when pressed together. The L2 and R2 keys
 can be held down in conjuction with the four d-pad (directional pad) and four shape buttons.
@@ -49,5 +49,15 @@ The down and up controls flow through a spigot and when allowed to pass through 
 Here is the full list of parameters and their respective controls.
 
 INSERT BUTTON LAYOUT SHEET
+
+######Functionality
+
+The first main functions are the key and scale selection. There are five scales to choose from; Major, Minor, Lydian, Mixolydian and Phrygian. Selecting 0-4 on the scale radio will write the corresponding scale to the "scaler" table, these messages contain the appropriate intervals used in each scale. 
+
+INSERT SCALER ABSTRACTION
+
+The key selection section offset the chosen value by a number ranging from 0-11. Each number coincides with a note from the chromatic scale. The chromatic scale is a musical scale with twelve pitches, each a semitone above or below another. On a modern piano or other equal-tempered instrument, all the semitones have the same size (100 cents). In other words, the notes of an equal-tempered chromatic scale are equally spaced. For example, 0 would be equal to note C and 1 would be equal to C#/Db.
+
+INSERT KEY ABSTRACTION AND ADD NOTES TO NUMBER VALUES
 
 
