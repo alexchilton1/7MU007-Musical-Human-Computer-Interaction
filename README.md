@@ -29,6 +29,8 @@ INSERT HID PRINTED DEVICES IN PD WINDOW WITH PS3 CIRCLED
 
 Select the corresponding device number on the radio selection box and engage the toggle box attached to the hid object. Hid (Human Interface Device) is an object for reading data from USB HID devices like keyboards, mice, joysticks, gamepads, keypads, and all sorts of other esoteric controllers like USB knobs, touchscreens, Apple IR Remotes, etc. It represents the data with a cross-platform message scheme which is then translated to the underlying native API for input devices. The PS3 controller should now be connected to the pure data patch.
 
+######How It Works
+
 The controller makes use of modifier keys to extend the amount of controls available in the patch. A modifier key is a special key (or combination) that temporarily modifies the normal action of another key when pressed together. The L2 and R2 keys
 can be held down in conjuction with the four d-pad (directional pad) and four shape buttons.
 
