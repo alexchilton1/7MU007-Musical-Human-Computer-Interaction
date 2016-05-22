@@ -64,6 +64,7 @@ These two features are important and are used in conjunction with the note selec
 
 INSERT FINAL KEY AND SCALE ABSTRACTION IN 8-STEP SUBPATCH
 
-
+As this part of the instrument is an 8-Step Monophonic Sequencer all of the values get picked up by a single mtof (MIDI to frequency) object and passed onto the next section.
 
 INSERT 8-STEP ABSTRACTION WITH SECTIONS LABELLED (BPM ETC)
+
