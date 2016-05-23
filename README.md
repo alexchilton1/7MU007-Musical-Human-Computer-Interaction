@@ -86,4 +86,10 @@ Both of the choices get routed to the attack and decay section. This is importan
 
 INSERT ATTACK AND DECAY ABSTRACTION
 
+The next part in the chain is the portamento section, here the MIDI notes are passed to the oscillators in sequence however the portamento value dteremines how long it will take to slide up or down, in milliseconds, to the next note. This happens by using a line object and specifying the note value and the time in millseconds it takes to reach the next note.
 
+INSERT PORTMENTO LABELLED
+
+Next is the FM modulation amount, the FM synthesis is modulated using a low-frequency osciallator (LFO). This LFO uses the sig object which converts numbers to audio signals. A number is converted into an audio signal, which is read by the mtof and driven by a triangle wave. This is mulitpled by the FM to modulate the signal and fed into the oscillator section to create a more complex wave. FM synthesis is a form of audio synthesis where the timbre of a simple waveform is changed by modulating its frequency with a modulator frequency that is also in the audio range, resulting in a more complex waveform and a different-sounding tone that can also be described as "gritty". The frequency of an oscillator is altered or distorted. There is also a secondary wave being added alongside the original wave to add width to the synthesiser sound.
+
+Next is the standalone LFO, this runs alongside the original wave and has been set to trigger on and off with the main wave. It uses a state-variable filter
