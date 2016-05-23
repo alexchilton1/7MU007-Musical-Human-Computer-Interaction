@@ -92,4 +92,10 @@ INSERT PORTMENTO LABELLED
 
 Next is the FM modulation amount, the FM synthesis is modulated using a low-frequency osciallator (LFO). This LFO uses the sig object which converts numbers to audio signals. A number is converted into an audio signal, which is read by the mtof and driven by a triangle wave. This is mulitpled by the FM to modulate the signal and fed into the oscillator section to create a more complex wave. FM synthesis is a form of audio synthesis where the timbre of a simple waveform is changed by modulating its frequency with a modulator frequency that is also in the audio range, resulting in a more complex waveform and a different-sounding tone that can also be described as "gritty". The frequency of an oscillator is altered or distorted. There is also a secondary wave being added alongside the original wave to add width to the synthesiser sound.
 
-Next is the standalone LFO, this runs alongside the original wave and has been set to trigger on and off with the main wave. It uses a state-variable filter
+INSERT FM LABELLED
+
+The attack and decay values enter next, the are routed into the main mulitplier box and dictate whether the signal is turned on or off. Next is the standalone LFO, this runs alongside the original wave and has been set to trigger on and off with the main wave. It uses the cutoff frequency argument of a state-variable filter, the cutoff frequency dial runs into pack and line objects to smooth the dial turns, this is sent into an addition box to be summed. Next an oscillator is set to modulate slowly at 0.25, multiplied by 400 and then had 400 added to it. Which means it modulates between 400 and 800, this is connected to a multiplier box and a second knob divides it by 127 for control over the LFO rate. These two signals get summed together into the cutoff frequency inlet of the svf.
+
+INSERT LFO LABELLED (SVF)
+
+
