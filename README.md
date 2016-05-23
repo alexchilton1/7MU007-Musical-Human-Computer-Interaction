@@ -94,8 +94,12 @@ Next is the FM modulation amount, the FM synthesis is modulated using a low-freq
 
 INSERT FM LABELLED
 
-The attack and decay values enter next, the are routed into the main mulitplier box and dictate whether the signal is turned on or off. Next is the standalone LFO, this runs alongside the original wave and has been set to trigger on and off with the main wave. It uses the cutoff frequency argument of a state-variable filter, the cutoff frequency dial runs into pack and line objects to smooth the dial turns, this is sent into an addition box to be summed. Next an oscillator is set to modulate slowly at 0.25, multiplied by 400 and then had 400 added to it. Which means it modulates between 400 and 800, this is connected to a multiplier box and a second knob divides it by 127 for control over the LFO rate. These two signals get summed together into the cutoff frequency inlet of the svf.
+The attack and decay values enter next, the are routed into the main mulitplier box and dictate whether the signal is turned on or off. Next is the standalone LFO, this runs alongside the original wave and has been set to trigger on and off with the main wave. It uses the cutoff frequency argument of a state-variable filter, the cutoff frequency dial runs into pack and line objects to smooth the dial turns, this is sent into an addition box to be summed. Next an oscillator is set to modulate slowly at 0.25, multiplied by 400 and then had 400 added to it. Which means it modulates between 400 and 800, this is connected to a multiplier box and a second knob divides it by 127 for control over the LFO rate. These two signals get summed together into the cutoff frequency inlet of the svf. This runs alongside the main oscillator.
 
 INSERT LFO LABELLED (SVF)
+
+Finally there are two filters running in series. They are low and high pass filters. They run between 0 and 145, using the power calculation to scale quickly between 0 and 21025. Rather than having to map 20000+ steps for the controller when changing the filter values this technique allows the filter to sweep up and down in four movements relatively quickly.
+
+INSERT LPF/HPF LABELLED
 
 
