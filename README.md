@@ -80,3 +80,6 @@ If the random ratchet option is selected then the radio objects are set to a num
 
 INSERT PD RATCHET ABSTRACTION
 
+These ratchet values flow into another gate system, functioning the same as the previously mentioned one, but this time either sends the information to every step of the sequence or only the ones it randomly selects. The random select behaves similarly to the random ratchet section, once selected, this selection tool chooses a number between 0 and 1. Zero meaning the step does not trigger an output and one meaning the selected output gets triggered.
+
+Both of the choices get routed to the attack and decay section. This is important as even if the step does not trigger a sound output it still triggers a value that tells the attack and decay section to remain at zero, this is important as this section knows it has not missed a step and can safely move onto the next step.
