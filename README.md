@@ -68,3 +68,15 @@ As this part of the instrument is an 8-Step Monophonic Sequencer all of the valu
 
 INSERT 8-STEP ABSTRACTION WITH SECTIONS LABELLED (BPM ETC)
 
+The next section contains the ratchet, step selection, attack and decay functions. The first inlet in the abstraction receives the toggle state from the global tempo toggle and the second inlet receives the millisecond value after it has been divided by eight, meaning it will produce a new set of data every time the eight step sequence resets. The output of this metro object runs to two separate places. The first in the random ratchet abstraction, there are eight of these; one for every step. Inside these is an expression that randomly chooses a number bewteen 0 and 2 which selects the respective ratcheting value. 
+
+INSERT PD RAND RATCHTED ABSTRACTION
+
+The random ratchet values run into a series of gates that allow for this function to be turned on and off whenever the user presses the L1 button. 
+
+INSERT RANDOM RATCHET GATES
+
+If the random ratchet option is selected then the radio objects are set to a number between 0 and 2 which gets delivered to the eight "pd ratchet" abstractions. Inside here the initial note in the sequence gets triggered on and off but if a ratchet option is selected the tempo is divided by one of two numbers. If number 1 is selected the ratchet is divided by four, this allows two pulses to be played in the space of one note. The reason it is divided by four instead of two is because the process requires four triggers. It needs a value to trigger the initial note on, another to trigger the delay before turning that note off and two more to repeat this process for the second note. This process is doubled for the last value which triggers four notes on and off.
+
+INSERT PD RATCHET ABSTRACTION
+
