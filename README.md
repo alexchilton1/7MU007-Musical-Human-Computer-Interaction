@@ -3,6 +3,14 @@ A real-time musical performance software synthesiser controlled via a PlayStatio
 
 ##Background
 
+Inspired by Brian Eno's generative music project "Scape" (http://www.generativemusic.com/scape.html), a tool that he claims possesses the ability to make music that thinks for itself. Eno (2012) believes that generative music requires guidelines to establish its boundaries, but it creates its own music. He describes the process as setting up the initial conditions and then letting the programme run, comparing the outcome to the growth of a seed.
+
+Believing that like a seed, something unique will grow out of the music. Neither the listener nor musician knows exactly what it will be, but each has a general idea or range of expectations.
+
+This project employs that same methodology, in two main areas especially. Firstly a few parameters are set into place, the scale and key boundaries to be precise. Once the note selection and ratchet value are set to random, the project selects from filtered down range of notes and ways to play them. Even if the exact same variables are selected each time, the music will not sound the same. Certain themes will be recognisable but they will not be identical.
+
+Also the synthesiser pad works on this principle, as the first note in the sequence is selected randomly that value is sent to the pad to be used as the root note. Depending on the key and scale selected the pad takes the root note value a creates a chord that will fit into whatever parameters are selected. This process between the random note selection and continuous synthesiser pad will progress indefinitely and will constantly generate new combinations.
+
 ##Prerequisites
 
 In order to be able to run this project you will need to have pure data extended installed on your system. Pure Data is free and available here https://puredata.info/downloads/pd-extended follow the guides online on how to set Pd up on your OS.
