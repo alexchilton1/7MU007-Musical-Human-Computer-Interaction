@@ -102,4 +102,12 @@ Finally there are two filters running in series. They are low and high pass filt
 
 INSERT LPF/HPF LABELLED
 
+The next audio generation section involves the synthesiser pad, which runs in polyphony and uses four voices. It has the ability to adapt to whatever scale is currently selected, as the main scale is altered the pad uses a gate to switch between different intervals used in the various scales. The first step in the scale triggers a MIDI note value which is routed into the synthesiser pad, a number between 0 and 1 is chosen randomly which switches between two octaves. If 0 is selected the note plays at its original value, however, if 1 is selected the note is raised an octave therefore raising the whole chord it generates by an ocatve. This works by selecting the first note, which acts as the root number. For example, if a major scale is selected the first number is the root and two more numbers are chosen alongside this, 3rd and 5th. The root has 4 added to it creating the 3rd which then has 3 added to it creating the 5th. This is because a major chord's structure is root, 3rd, 5th. In note form, a C major chord would be 48(C), 52(E) and 55(G). The intervals chosen are the intervals used in whatever scale is selected. These interval values are then sent it a makenote object, with the velocity and note duration set to the same amount. This is so that the notes always trigger on and off, allowing for an ADSR (Attack, Decay, Sustain and Release) envelope to be used. Each individual note has the option to use one of four voices, this is what makes the instrument polyphonic.
 
+INSERT PAD SECTION ABSTRACTION
+
+It sends the polyphonic data out to the four voices stored inside the voice management subpatch, these voices use a global ADSR to control how the pad sounds dynamically and are all added together in a single expression.
+
+INSERT VOICE MANAGEMENT ABSTRACTION
+
+Inside each voice there is an oscillator section and unique ADSR. The incoming signal is split with the MIDI note being sent to the oscillator section and the trigger data going to the envelope.
