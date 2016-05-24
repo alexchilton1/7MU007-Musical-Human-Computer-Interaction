@@ -115,3 +115,17 @@ Inside each voice there is an oscillator section and unique ADSR. The incoming s
 INSERT VOICE 1 ABSTRACTION
 
 The ADSR waits for two pieces of information, note on and note off. There is a select 0 object in the voice 1 abstraction, the left hand side passes the note on data and the right hand side lets the envelope know that the note is no longer being played. The envelope works by going to 1 in the specified time set by the attack fader, waiting for that amount of and setting the sustain volume at a level after waiting for a specific amount of time set by the decay fader. After the note off trigger is sent, the release fader states how long, in milliseconds, it take for the note to completely fade out.
+
+INSERT ADSR ABSTRACTION
+
+The MIDI note is sent to a mtof and is converted into frequency. Inside the oscillator bank this frequency flows into sinewave and squarewave oscillators which are sent out into a multiplier box.
+
+Back in the main patch, there is a subpatch for the ADSR controls. This is simply a global send to all the individual envelope generators.
+
+INSERT ADSR SENDS
+
+The penultimate subpatch contains the reverb section. For this project, in the interest of time, the Freeverb~ object was used instead of building one from scratch. The dry signal, damping and roomsize are all set to static values. The control comes in the form of the wet amount, the player can dial in as much or as little as necessary.
+
+INSERT REVERB ABSTRACTION
+
+Finally this stereo signal is routed out to output~ object which controls the overall volume and provides fast access to the DSP.
