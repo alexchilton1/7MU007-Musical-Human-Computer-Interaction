@@ -15,7 +15,7 @@ To use the PS3 controlling within pure data you will need to download the [hid] 
 
 Open LorkSynthPS3.pd
 
-https://github.com/alexchilton1/7MU007-Musical-Human-Computer-Interaction/blob/master/1.png
+![1](https://github.com/alexchilton1/7MU007-Musical-Human-Computer-Interaction/blob/master/1.png)
 
 The is synthesiser is capable of much more than it currently does within this patch but some of its parameters have been limited for the sake of the group project, where multiple of these kind of real-time instruments link up and interact as a digital orchestra. If the parameters did not work within these constraints then it would be impossible, or at least extremely difficult, to have any control over this synthesiser in the group performance. The limitations set in place for this project allow full control over the instrument at any given point of the performance, so the player has the ability to react to any other changes made by the other instruments in the orchestra within the performance.
 
