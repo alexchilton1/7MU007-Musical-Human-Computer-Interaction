@@ -130,4 +130,4 @@ The penultimate subpatch contains the reverb section. For this project, in the i
 
 ![25](https://github.com/alexchilton1/7MU007-Musical-Human-Computer-Interaction/blob/master/25.png)
 
-Finally this stereo signal is routed out to output~ object which controls the overall volume and provides fast access to the DSP.
+Finally this stereo signal is routed out to the output~ object which controls the overall volume and provides fast access to the DSP.
