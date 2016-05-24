@@ -110,4 +110,8 @@ It sends the polyphonic data out to the four voices stored inside the voice mana
 
 INSERT VOICE MANAGEMENT ABSTRACTION
 
-Inside each voice there is an oscillator section and unique ADSR. The incoming signal is split with the MIDI note being sent to the oscillator section and the trigger data going to the envelope.
+Inside each voice there is an oscillator section and unique ADSR. The incoming signal is split with the MIDI note being sent to the oscillator section and the trigger data going to the envelope. 
+
+INSERT VOICE 1 ABSTRACTION
+
+The ADSR waits for two pieces of information, note on and note off. There is a select 0 object in the voice 1 abstraction, the left hand side passes the note on data and the right hand side lets the envelope know that the note is no longer being played. The envelope works by going to 1 in the specified time set by the attack fader, waiting for that amount of and setting the sustain volume at a level after waiting for a specific amount of time set by the decay fader. After the note off trigger is sent, the release fader states how long, in milliseconds, it take for the note to completely fade out.
